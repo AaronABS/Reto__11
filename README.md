@@ -4,11 +4,10 @@
 Desarrolle un programa que permita realizar la suma/resta de matrices. El programa debe validar las condiciones necesarias para ejecutar la operación.
 
 ```
-# Punto 1
-# Pedir la dimension de las matrices al usuario
+# Se solicita las medidas de la matriz
 fila = int(input("Ingrese el numero de filas para las matrices: "))
 columna = int(input("Ingrese el numero de columnas para las matrices: "))
-# Crear la primera matriz
+# Se crea la primera matriz
 print("Ingrese los valores de la primera matriz:")
 matriz1 = []
 for i in range(fila):
@@ -16,7 +15,7 @@ for i in range(fila):
     for j in range(columna):
         fila_matriz1.append(int(input()))
     matriz1.append(fila_matriz1)
-# Crear la segunda matriz
+# Se crea la segunda matriz
 print("Ingrese los valores de la segunda matriz:")
 matriz2 = []
 for i in range(fila):
@@ -24,7 +23,7 @@ for i in range(fila):
     for j in range(columna):
         fila_matriz2.append(int(input()))
     matriz2.append(fila_matriz2)
-# Sumar o restar las matrices
+# Se determinan las operaciones entre las matrices
 operacion = input("¿Desea sumar o restar las matrices? ")
 if operacion == "sumar":
     resultado = []
@@ -46,6 +45,7 @@ elif operacion == "restar":
     print("El resultado de la resta de las matrices es:")
     for i in range(fila):
         print(resultado[i])
+# Especificación de las únicas dos operaciones posibles        
 else:
     print("Operacion no valida. Por favor, ingrese 'sumar' o 'restar'.")
 ```
