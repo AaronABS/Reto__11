@@ -3,7 +3,7 @@
 ### Punto 1. 
 Desarrolle un programa que permita realizar la suma/resta de matrices. El programa debe validar las condiciones necesarias para ejecutar la operación.
 
-'''
+```
 # Punto 1
 # Pedir la dimension de las matrices al usuario
 fila = int(input("Ingrese el numero de filas para las matrices: "))
@@ -48,7 +48,7 @@ elif operacion == "restar":
         print(resultado[i])
 else:
     print("Operacion no valida. Por favor, ingrese 'sumar' o 'restar'.")
-'''
+```
 
 ### Punto 2. 
 Desarrolle un programa que permita realizar el producto de matrices. El programa debe validar las condiciones necesarias para ejecutar la operación.
