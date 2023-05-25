@@ -4,50 +4,52 @@
 Desarrolle un programa que permita realizar la suma/resta de matrices. El programa debe validar las condiciones necesarias para ejecutar la operación.
 
 ```
-# Se solicita las medidas de la matriz
-fila = int(input("Ingrese el numero de filas para las matrices: "))
+# Solicitar las medidas de las matrices, columnas y filas
 columna = int(input("Ingrese el numero de columnas para las matrices: "))
-# Se crea la primera matriz
+fila = int(input("Ingrese el numero de filas para las matrices: "))
+# Se crea la matriz con las medidas dadas
+# Solicitar las datos de la matriz
 print("Ingrese los valores de la primera matriz:")
-matriz1 = []
+primeraMatriz = []
+# Se crea un ciclo for para almacenar los valores de primeraMatriz
 for i in range(fila):
-    fila_matriz1 = []
+    fila_primeraMatriz = []
     for j in range(columna):
-        fila_matriz1.append(int(input()))
-    matriz1.append(fila_matriz1)
-# Se crea la segunda matriz
+        fila_primeraMatriz.append(int(input()))
+# Se utiliza .append para agragar los valores a la fila_primeraMatriz
+    primeraMatriz.append(fila_primeraMatriz)
+# Se crea la segunda matriz con los mismos procedimientos
 print("Ingrese los valores de la segunda matriz:")
-matriz2 = []
+segundaMatriz = []
 for i in range(fila):
-    fila_matriz2 = []
+    fila_segundaMatriz = []
     for j in range(columna):
-        fila_matriz2.append(int(input()))
-    matriz2.append(fila_matriz2)
-# Se determinan las operaciones entre las matrices
-operacion = input("¿Desea sumar o restar las matrices? ")
-if operacion == "sumar":
+        fila_segundaMatriz.append(int(input()))
+    segundaMatriz.append(fila_segundaMatriz)
+# Se establece la suma o resta de las matrices
+procedimiento = input("¿Quiere sumar o restar las matrices? ")
+if procedimiento == "sumar":
     resultado = []
     for i in range(fila):
         fila_resultado = []
         for j in range(columna):
-            fila_resultado.append(matriz1[i][j] + matriz2[i][j])
+            fila_resultado.append(primeraMatriz[i][j] + segundaMatriz[i][j])
         resultado.append(fila_resultado)
-    print("El resultado de la suma de las matrices es:")
+    print("La suma de las matrices es:")
     for i in range(fila):
         print(resultado[i])
-elif operacion == "restar":
+elif procedimiento == "restar":
     resultado = []
     for i in range(fila):
         fila_resultado = []
         for j in range(columna):
-            fila_resultado.append(matriz1[i][j] - matriz2[i][j])
+            fila_resultado.append(primeraMatriz[i][j] - segundaMatriz[i][j])
         resultado.append(fila_resultado)
-    print("El resultado de la resta de las matrices es:")
+    print("La resta de las matrices es:")
     for i in range(fila):
         print(resultado[i])
-# Especificación de las únicas dos operaciones posibles        
 else:
-    print("Operacion no valida. Por favor, ingrese 'sumar' o 'restar'.")
+    print("Procedimiento invalido. Por favor, ingrese 'sumar' o 'restar'.")
 ```
 
 ### Punto 2. 
